@@ -1,16 +1,10 @@
-package com.linkitsoft.GKMenuboard.Utils;
+package com.example.mathutils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Base64;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 public class LocalDataManager {
     SharedPreferences pref;
@@ -121,31 +115,31 @@ public class LocalDataManager {
         }
         return date;
     }
-
-    public <T> void putData(String key, T data) {
-        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
-        editor.putString(key, gson.toJson(data));
-        editor.commit();
-    }
-
-    public <T> T getData(String key, Type type) {
-        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
-        return gson.fromJson(pref.getString(key, "{}"), type);
-    }
-
-    public <T> void putList(String key, List<T> list) {
-        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
-        editor.putString(key, gson.toJson(list));
-        editor.commit();
-    }
-
-    public <T> List<T> getList(String key, Type type) {
-        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
-        return gson.fromJson(pref.getString(key, "[]"), type);
-    }
-
-    public void clear() {
-        editor.clear();
-        editor.commit();
-    }
+//
+//    public <T> void putData(String key, T data) {
+//        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+//        editor.putString(key, gson.toJson(data));
+//        editor.commit();
+//    }
+//
+//    public <T> T getData(String key, Type type) {
+//        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+//        return gson.fromJson(pref.getString(key, "{}"), type);
+//    }
+//
+//    public <T> void putList(String key, List<T> list) {
+//        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+//        editor.putString(key, gson.toJson(list));
+//        editor.commit();
+//    }
+//
+//    public <T> List<T> getList(String key, Type type) {
+//        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+//        return gson.fromJson(pref.getString(key, "[]"), type);
+//    }
+//
+//    public void clear() {
+//        editor.clear();
+//        editor.commit();
+//    }
 }
