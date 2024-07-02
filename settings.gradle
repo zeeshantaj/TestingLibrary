@@ -1,5 +1,5 @@
 pluginManagement {
-    ext.kotlin_version = '1.8.0'  // Update to 1.8.0 or higher
+    ext.kotlin_version = '1.6.0'  // Update to 1.8.0 or higher
     repositories {
         gradlePluginPortal()
         google()
