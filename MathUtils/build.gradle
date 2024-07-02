@@ -11,7 +11,7 @@ android {
         minSdk 27
         targetSdk 34
         versionCode 1
-        versionName "1.6.0"
+        versionName "1.7.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -29,30 +29,49 @@ android {
     kotlinOptions {
         jvmTarget = '17'  // Ensure compatibility with Java 17
     }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
+//    publishing {
+//        singleVariant("release") {
+//            withSourcesJar()
+//        }
+//    }
 }
 publishing {
     publications {
         release(MavenPublication) {
-           // from components.release
+            //from components.release
             from components.findByName('release')
             groupId = 'com.github.zeeshantaj'
             artifactId = 'TestingLibrary'
-            version = '1.6.0'
+            version = '1.7.0'
         }
+
     }
     repositories {
-        mavenLocal()  // Publish to local Maven repository
         maven {
-            url = uri("https://jitpack.io")  // Publish to JitPack repository
+            name = "TestingLibrary"
+            url = uri("https://maven.pkg.github.com/zeeshantaj/TestingLibrary")
         }
     }
-
 }
+
+//publishing {
+//    publications {
+//        release(MavenPublication) {
+//           // from components.release
+//            from components.findByName('release')
+//            groupId = 'com.github.zeeshantaj'
+//            artifactId = 'TestingLibrary'
+//            version = '1.6.0'
+//        }
+//    }
+//    repositories {
+//        mavenLocal()  // Publish to local Maven repository
+//        maven {
+//            url = uri("https://jitpack.io")  // Publish to JitPack repository
+//        }
+//    }
+//
+//}
 dependencies {
     implementation "androidx.activity:activity:1.8.0"
     implementation 'com.google.android.material:material:1.12.0'
