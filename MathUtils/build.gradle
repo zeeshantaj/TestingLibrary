@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'maven-publish'
-    id 'org.jetbrains.kotlin.android' version '1.8.0'
+    id 'org.jetbrains.kotlin.android' version '1.6.0'
 }
 android {
     namespace 'com.example.mathutils'
@@ -11,7 +11,7 @@ android {
         minSdk 27
         targetSdk 34
         versionCode 1
-        versionName "1.9.0"
+        versionName "1.10.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -42,7 +42,7 @@ publishing {
             from components.findByName('release')
             groupId = 'com.github.zeeshantaj'
             artifactId = 'TestingLibrary'
-            version = '1.9.0'
+            version = '1.10.0'
         }
 
     }
