@@ -11,7 +11,7 @@ android {
         minSdk 27
         targetSdk 34
         versionCode 1
-        versionName "1.10.0"
+        versionName "1.11.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -42,14 +42,14 @@ publishing {
             from components.findByName('release')
             groupId = 'com.github.zeeshantaj'
             artifactId = 'TestingLibrary'
-            version = '1.10.0'
+            version = '1.11.0'
         }
 
     }
     repositories {
         maven {
             name = "TestingLibrary"
-            url = uri("https://maven.pkg.github.com/zeeshantaj/TestingLibrary")
+            url = uri("https://jitpack.io/#zeeshantaj/Toasty")
         }
     }
 }
