@@ -49,8 +49,8 @@ publishing {
     repositories {
         maven {
             name = "TestingLibrary"
-            //url = uri("https://jitpack.io/#zeeshantaj/Testinglibrary")
-            url = uri("https://maven.pkg.github.com/zeeshantaj/TestingLibrary")
+            url = uri("https://jitpack.io/#zeeshantaj/Testinglibrary")
+            //url = uri("https://maven.pkg.github.com/zeeshantaj/TestingLibrary")
         }
     }
 }
