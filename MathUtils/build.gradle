@@ -11,8 +11,8 @@ android {
     defaultConfig {
         minSdk 27
         targetSdk 34
-        versionCode 4
-        versionName "1.2.0"
+        versionCode 1
+        versionName "0.1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -40,7 +40,7 @@ publishing {
             from components.findByName('release')
             groupId = 'com.github.zeeshantaj'
             artifactId = 'TestingLibrary'
-            version = '1.2.0'
+            version = '0.1.0'
         }
     }
 }
