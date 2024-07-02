@@ -33,13 +33,13 @@ publishing {
             from components.findByName('release')
             groupId = 'com.github.zeeshantaj'
             artifactId = 'TestingLibrary'
-            version = '0.7.0'
+            version = '0.8.0'
         }
 
     }
     repositories {
         maven {
-            name = "TestingLibrary"
+            name = "MathUtils"
             url = uri("https://maven.pkg.github.com/zeeshantaj/TestingLibrary")
         }
     }
