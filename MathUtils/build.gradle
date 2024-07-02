@@ -11,7 +11,7 @@ android {
         minSdk 27
         targetSdk 34
         versionCode 1
-        versionName "1.8.0"
+        versionName "1.9.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -35,24 +35,24 @@ android {
 //        }
 //    }
 }
-//publishing {
-//    publications {
-//        release(MavenPublication) {
-//            //from components.release
-//            from components.findByName('release')
-//            groupId = 'com.github.zeeshantaj'
-//            artifactId = 'TestingLibrary'
-//            version = '1.7.0'
-//        }
-//
-//    }
-//    repositories {
-//        maven {
-//            name = "TestingLibrary"
-//            url = uri("https://maven.pkg.github.com/zeeshantaj/TestingLibrary")
-//        }
-//    }
-//}
+publishing {
+    publications {
+        release(MavenPublication) {
+            //from components.release
+            from components.findByName('release')
+            groupId = 'com.github.zeeshantaj'
+            artifactId = 'TestingLibrary'
+            version = '1.9.0'
+        }
+
+    }
+    repositories {
+        maven {
+            name = "TestingLibrary"
+            url = uri("https://maven.pkg.github.com/zeeshantaj/TestingLibrary")
+        }
+    }
+}
 
 //publishing {
 //    publications {
